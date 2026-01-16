@@ -1,0 +1,267 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    background-color: #80b38a;
+    padding: 1em;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #e1f5fe;
+}
+
+/* Header */
+header {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 2em 1em;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em;
+}
+section {
+    margin-bottom: 3em;
+    padding: 2em;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h1, h2 {
+    color: #e2e7ed;
+}
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+h2 {
+    border-bottom: 2px solid #030e18;
+    padding-bottom: 0.5em;
+}
+
+/* Tagline */
+.tagline {
+    font-style: italic;
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+
+/* Profile image */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 1em auto;
+    display: block;
+    border: 5px solid #4a90e2;
+}
+
+/* Skills */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.skill {
+    background-color: #e1f5fe;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #0277bd;
+}
+
+/* Projects */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.project-card {
+    flex: 1 1 300px;
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+}
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.project-card h3 {
+    margin-top: 1em;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 1em;
+}
+.btn:hover {
+    background-color: #357abd;
+}
+
+/* Contact form */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.contact-form button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.contact-form button:hover {
+    background-color: #357abd;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #4a90e2;
+    color: white;
+}
+
+/* Links */
+a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dark mode styles */
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+body.dark nav {
+    background-color: #333;
+}
+body.dark section {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+body.dark .project-card {
+    background-color: #2a2a2a;
+}
+body.dark .skill {
+    background-color: #333;
+    color: #4a90e2;
+}
+body.dark footer {
+    background-color: #333;
+    color: #ffffff;
+}
+
+/* Filter buttons */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 2em;
+}
+.filter-buttons button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.filter-buttons button:hover,
+.filter-buttons button.active {
+    background-color: #357abd;
+}
+body.dark .filter-buttons button {
+    background-color: #555;
+}
+body.dark .filter-buttons button:hover,
+body.dark .filter-buttons button.active {
+    background-color: #777;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typing animation */
+.typing {
+    border-right: 2px solid #4a90e2;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%, 50% { border-color: transparent; }
+    51%, 100% { border-color: #4a90e2; }
+}
+
+/* Hover and click effects */
+.project-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.project-card:active {
+    transform: scale(0.95);
+}
+.btn {
+    transition: transform 0.2s;
+}
+.btn:active {
+    transform: scale(0.95);
+}
